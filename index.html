@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Management form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="resources/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="resources/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="page-header text-center">Shipment Management form</h2>
+      <form id="FormData" method="post">
+        <!--<div class="col-xs-12">
+          <button class="btn btn-default pull-right" id="defaultData">
+            Fill default data
+          </button>
+        </div>-->
+
+        <div class="form-group">
+          <label>Shipment No.</label>
+          <input
+            type="number"
+            class="form-control"
+            id="shipment_no"
+            placeholder="Enter Shipment No."
+            onchange="getData()"
+          />
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="description"
+            placeholder="Enter Description"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label>Source</label>
+          <input
+            type="text"
+            class="form-control"
+            id="source"
+            placeholder="Enter Source"
+          />
+        </div>
+        <div class="form-group">
+          <label>Destination</label>
+          <input
+            type="text"
+            class="form-control"
+            id="destination"
+            placeholder="Enter Destination"
+          />
+        </div>
+        <div class="form-group">
+          <label>Shipping Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="ship_date"
+            placeholder="Enter Shipping Date"
+          />
+        </div>
+        <div class="form-group">
+          <label>Expected Delivery Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="delivery_date"
+            placeholder="Enter Expected Delivery Date"
+          />
+        </div>
+        <div class="form-group text-center">
+          <input
+            type="button"
+            class="btn btn-primary"
+            id="SaveBtn"
+            value="Save"
+            onclick="saveData()"
+            disabled
+          />
+          <input
+            type="button"
+            class="btn btn-warning"
+            id="UpdateBtn"
+            value="Update"
+            onclick="updateData()"
+            disabled
+          />
+          <input
+            type="button"
+            class="btn btn-danger"
+            id="ResetBtn"
+            value="Reset"
+            onclick="resetForm()"
+            disabled
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
